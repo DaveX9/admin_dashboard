@@ -1,0 +1,91 @@
+/* Admin Panel - Edit JOIN US Section */
+.admin-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.admin-container h2 {
+    font-size: 24px;
+    color: #3b2c50;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.admin-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-container label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.admin-container input,
+.admin-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.admin-container textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Upload Image Preview */
+.admin-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+.admin-container button {
+    background: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.admin-container button:hover {
+    background: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .admin-container input,
+    .admin-container textarea {
+        font-size: 14px;
+    }
+
+    .admin-container button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

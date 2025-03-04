@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Home Inspection</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../admin_panel/assets/css/dassboard1.css">
+    <script src="../js/aos.js"></script>
+    <script src="../js/dashboard.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Sidebar (if any) -->
+    <aside class="sidebar">
+        <div class="user-profile">
+            <img src="../admin_panel/assets/img/admin.png" alt="User Avatar">
+            <p>Hi, <strong>Admin</strong></p>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="dashboard1.html" class="nav-link"><i class="fas fa-tools"></i>Dashboard</a>
+            </li>
+
+            <!-- Home Dropdown -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleDropdown('homeDropdown')">
+                    <i class="fas fa-home"></i> Home
+                    <span class="arrow">&#9662;</span>
+                </a>
+                <ul class="dropdown-menu" id="homeDropdown">
+                    <li><a href="latestnews.html">Latest News</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="services.html" class="nav-link"><i class="fas fa-tools"></i> Services</a></li>
+            <li class="nav-item"><a href="promotion.html" class="nav-link"><i class="fas fa-tags"></i> Promotion</a>
+            </li>
+
+            <!-- About Us Dropdown -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleDropdown('aboutDropdown')">
+                    <i class="fas fa-info-circle"></i> About Us
+                    <span class="arrow">&#9662;</span>
+                </a>
+                <ul class="dropdown-menu" id="aboutDropdown">
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_ourstory.php">Our ourStory</a></li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_ourteam.php">Our Team</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="moreservice.html" class="nav-link"><i class="fas fa-plus-circle"></i> More
+                    Service</a></li>
+            <li class="nav-item"><a href="articles.html" class="nav-link"><i class="fas fa-newspaper"></i> Articles</a>
+            </li>
+            <li class="nav-item"><a href="housereview.html" class="nav-link"><i class="fas fa-home"></i> House
+                    Review</a></li>
+            <li class="nav-item"><a href="houseinterior.html" class="nav-link"><i class="fas fa-couch"></i> House
+                    Interior</a></li>
+            <!-- Join With Us Dropdown -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleDropdown('joinDropdown')">
+                    <i class="fas fa-users"></i> Join With Us
+                    <span class="arrow">&#9662;</span>
+                </a>
+                <ul class="dropdown-menu" id="joinDropdown">
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_joinus.php"
+                            data-translate="nav.ourStory">รวมงานกับเรา</a>
+                    </li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_job1.php" data-translate="nav.ourTeam">Job-details</a>
+                    </li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_manage_jobs.php" data-translate="nav.ourTeam">Manage
+                            Jobs</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="admin_contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact
+                    Us</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <!-- <a href="login.html" class="btn-login">Login</a> -->
+            <a href="/ADMIN_PANEL/backend/logout.php" class="btn-logout">Logout</a>
+        </div>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <h1>Dashboard Overview</h1>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg" id="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 id="hero-title">Thailand’s No.1 <br><span></span></h1>
+                <p id="hero-subtitle">Home Inspection Company.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="services-header" data-aos="fade-up">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up-right">
+                    <div class="service-icon">
+                        <a href="service1.html">
+                            <img src="/ADMIN_PANEL/assets/img/s1.png" alt="T. Home Inspector">
+                        </a>
+                    </div>
+                    <h3>T. Home Inspector</h3>
+                </div>
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <a href="hinterior.html">
+                            <img src="/ADMIN_PANEL//assets/img/s2.png" alt="T. Home Interior">
+                        </a>
+                    </div>
+                    <h3>T. Home Interior</h3>
+                </div>
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <a href="/ADMIN_PANEL/Hconstruction.html">
+                            <img src="/ADMIN_PANEL/assets/img/s3.png" alt="T. Home Construction">
+                        </a>
+                    </div>
+                    <h3>T. Home Construction</h3>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="fade-up-left">
+                    <div class="service-icon">
+                        <a href="/ADMIN_PANEL/Hbulter.html">
+                            <img src="/ADMIN_PANEL/assets/img/s4-bg.png" alt="Home Butler">
+                        </a>
+                    </div>
+                    <h3>Home Butler</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <div class="stats-section" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="content-wrapper">
+                <!-- Left Content: Title and Subtitle -->
+                <div class="elfsight-app-c9e9af2e-5acf-4478-8bc7-62f17e30af1c" data-elfsight-app-lazy></div>
+                <!-- Stats Boxes -->
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <img src="/HOMESPECTOR/icon/ICON/capacity.png" alt="Developer Count">
+                        <h2 id="developer-count">0</h2>
+                        <p>Developer Count</p>
+                    </div>
+                    <div class="stat-box">
+                        <img src="/HOMESPECTOR/icon/ICON/blueprint.png" alt="Projects">
+                        <h2 id="project-count">0</h2>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-box">
+                        <img src="/HOMESPECTOR/icon/ICON/house.png" alt="Houses">
+                        <h2 id="house-count">0</h2>
+                        <p>Houses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h1 class="faq-title">Frequently Asked Questions</h1>
+            <div class="faq-content">
+                <div class="faq-questions">
+                    <!-- plumbing Questions -->
+                    <div class="faq-section plumbing" id="plumbing">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleAnswer(this)">
+                                เราแตกต่างจากที่อื่นอย่างไร? <span class="icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>เราเป็นผู้นำด้านการตรวจบ้านอันดับต้นๆ ของประเทศ
+                                    และเป็นบริษัทตรวจบ้านเจ้าแรกและเจ้าเดียวที่ออกแบบและพัฒนาระบบ Web-Application
+                                    ในการตรวจบ้านเป็นของตัวเอง
+                                    จดทะเบียนเป็นบริษัทและได้รับอนุญาตประกอบวิชาชีพวิศวกรรมควบคุมในรูปแบบนิติบุคคล
+                                    มีมาตรฐานสากล
+                                    ISO29110-4-3 Service Delivery รองรับ</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleAnswer(this)">
+                                มีรับประกันตรวจสอบไหม ? <span class="icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>การตรวจบ้านไม่สามารถรับประกันการตรวจสอบ การันตี หรือการประกันภัยใดๆ
+                                    ที่เกี่ยวกับงานโครงสร้างและระบบของตัวบ้านได้
+                                    การตรวจสอบนี้ไม่ใช่การประกอบวิชาชีพทางวิศวกรรมหรือสถาปัตยกรรม
+                                    ไม่สามารถพยากรณ์หรือคาดคะเนได้ถึงสภาพของบ้านในอนาคตภายหน้าในทุกสภาวะ
+                                    เนื่องด้วยอาจมีปัจจัยแวดล้อมอื่นๆ ที่ไม่สามารถควบคุมได้</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleAnswer(this)">
+                                บริษัทตรวจในเรื่องความสวยงามละเอียดไหม ? <span class="icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>ความสวยงามเป็นเรื่องปัจเจคบุคคล ที่แต่ละคนก็มีมุมมอง ความต้องการ
+                                    ความรู้สึกและความพึงพอใจในเรื่องความสวยงามที่ไม่เท่ากัน
+                                    ทางบริษัททำการตรวจสอบให้ในภาพรวมโดยใช้สายตา
+                                    (Visual Inspection)
+                                    ทั้งนี้การตรวจสอบจะเน้นตรวจงานระบบและฟังก์ชันการใช้งานในบ้านเป็นหลัก</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleAnswer(this)">
+                                ตรวจสอบความแข็งแรงโครงสร้างบ้านด้วยไหม ? <span class="icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>การตรวจสอบงานโครงสร้างบ้านนั้นสามารถดูที่ปลายเหตุเท่านั้น
+                                    เนื่องจากบ้านที่สร้างเสร็จแล้วนั้นส่วนของโครงสร้างทั้งหมดจะถูกปิดบังเอาไว้ด้วยส่วนตกแต่งต่างๆ
+                                    ไปทั้งหมด ทั้งเสาเข็ม ฐานราก การผูกเหล็กฯ อย่างเช่นเสาและคานจะถูกทับด้วยปูนฉาบ
+                                    ดังนั้นปัญหาโครงสร้างที่ตรวจพบจึงเป็นแค่ปลายเหตุ
+                                    กล่าวคือทีมงานตรวจสอบงานโครงสร้างที่สามารถมองเห็นได้ด้วยตาเปล่า เช่น
+                                    ตรวจสอบรอยร้าว
+                                    วิศวกรที่เชี่ยวชาญจะสามารถประเมินได้ว่าลักษณะรอยแตกร้าวที่พบเป็นรอยแตกร้าวที่บ่งชี้ถึงปัญหาโครงสร้างหรือรอยแตกร้าวผิวทั่วไป
+                                    หรือตรวจสอบรูปร่างลักษณะของโครงสร้างต่างๆ
+                                    เช่น เสา คานต้องไม่รูปร่างผิดปกติ เช่น คานไม่งอ ไม่โค้ง ไม่แอ่น</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="/admin_panel/assets/js/stats-section.js"></script>
+    <script src="/admin_panel/assets/js/faq.js"></script>
+    <script>
+        function toggleDropdown(id) {
+            let dropdown = document.getElementById(id);
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

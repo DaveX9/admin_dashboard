@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Edit Contact Info</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Edit Contact Information</h2>
+        <form id="contactForm">
+            <label>Company Name:</label>
+            <input type="text" id="company_name" name="company_name" required>
+
+            <label>Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label>Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Facebook Link:</label>
+            <input type="text" id="facebook_link" name="facebook_link">
+
+            <label>Instagram Link:</label>
+            <input type="text" id="instagram_link" name="instagram_link">
+
+            <label>Line Link:</label>
+            <input type="text" id="line_link" name="line_link">
+
+            <label>Phone Link:</label>
+            <input type="text" id="phone_link" name="phone_link">
+
+            <button type="submit">Update Contact</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('./backend/get_contact.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error("Error:", data.error);
+                    } else {
+                        document.getElementById('company_name').value = data.company_name || '';
+                        document.getElementById('address').value = data.address || '';
+                        document.getElementById('phone').value = data.phone || '';
+                        document.getElementById('email').value = data.email || '';
+                        document.getElementById('facebook_link').value = data.facebook_link || '';
+                        document.getElementById('instagram_link').value = data.instagram_link || '';
+                        document.getElementById('line_link').value = data.line_link || '';
+                        document.getElementById('phone_link').value = data.phone_link || '';
+                    }
+                })
+                .catch(error => console.error('Error fetching contact data:', error));
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    let formData = new FormData(this);
+
+    fetch('./backend/update_contact.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.success || data.error);
+        setTimeout(() => location.reload(), 1000); // Reload page after update
+    })
+    .catch(error => console.error('Error updating contact data:', error));
+});
+
+    </script>
+</body>
+</html>

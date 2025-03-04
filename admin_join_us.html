@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Join Us</title>
+    <link rel="stylesheet" href="../admin_panel/assets/css/join_us.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2>Edit JOIN US Section</h2>
+
+        <form id="joinUsForm" enctype="multipart/form-data">
+            <label>Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label>Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label>Upload Image:</label>
+            <input type="file" id="image" name="image">
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        // Load existing JOIN US data
+        fetch('get_join_us.php')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('title').value = data.title;
+                document.getElementById('description').value = data.description;
+            });
+
+        // Update JOIN US data
+        document.getElementById('joinUsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+
+            fetch('update_join_us.php', { method: 'POST', body: formData })
+                .then(response => response.json())
+                .then(data => alert(data.success || data.error));
+        });
+    </script>
+
+</body>
+</html>
