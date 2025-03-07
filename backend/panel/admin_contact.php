@@ -1,7 +1,7 @@
 <?php
 ob_start(); 
 session_start(); 
-include '../header.php';
+
 
 // Database connection
 $pdo = new PDO("mysql:host=localhost;dbname=homespector", "root", "");

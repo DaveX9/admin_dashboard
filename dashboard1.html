@@ -38,8 +38,24 @@
                 </ul>
             </li>
 
-            <li class="nav-item"><a href="services.html" class="nav-link"><i class="fas fa-tools"></i> Services</a></li>
-            <li class="nav-item"><a href="promotion.html" class="nav-link"><i class="fas fa-tags"></i> Promotion</a>
+            <!-- Services Dropdown -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleDropdown('ServicesDropdown')">
+                    <i class="fas fa-users"></i> Services
+                    <span class="arrow">&#9662;</span>
+                </a>
+                <ul class="dropdown-menu" id="ServicesDropdown">
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_HInspector.php"
+                            data-translate="nav.services">T. Home Inspector</a>
+                    </li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_Interior.php" data-translate="nav.services">T. Home Interior</a>
+                    </li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_Hconstruction.php" data-translate="nav.services">T. Home Construction</a></li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_Hbulter.html" data-translate="nav.services">Home Butler</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="/ADMIN_PANEL/backend/panel/admin_promotion.php" class="nav-link"><i
+                        class="fas fa-tags"></i> Promotion</a>
             </li>
 
             <!-- About Us Dropdown -->
@@ -49,13 +65,22 @@
                     <span class="arrow">&#9662;</span>
                 </a>
                 <ul class="dropdown-menu" id="aboutDropdown">
-                    <li><a href="/ADMIN_PANEL/backend/panel/admin_ourstory.php">Our ourStory</a></li>
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_ourstory.php">Our Story</a></li>
                     <li><a href="/ADMIN_PANEL/backend/panel/admin_ourteam.php">Our Team</a></li>
                 </ul>
             </li>
-
-            <li class="nav-item"><a href="moreservice.html" class="nav-link"><i class="fas fa-plus-circle"></i> More
-                    Service</a></li>
+            <!-- additional services Dropdown -->
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="toggleDropdown('additional services Dropdown')">
+                    <i class="fas fa-plus-circle"></i> Additional Services
+                    <span class="arrow">&#9662;</span>
+                </a>
+                <ul class="dropdown-menu" id="additional services Dropdown">
+                    <li><a href="/ADMIN_PANEL/backend/panel/admin_newapp.php">app-inspector</a></li>
+                    <li><a href="#">cal-electric</a></li>
+                    <li><a href="#">checklist</a></li>
+                </ul>
+            </li>
             <li class="nav-item"><a href="articles.html" class="nav-link"><i class="fas fa-newspaper"></i> Articles</a>
             </li>
             <li class="nav-item"><a href="housereview.html" class="nav-link"><i class="fas fa-home"></i> House
