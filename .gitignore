@@ -1,0 +1,26 @@
+# 3.1 Ignore Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+vendor/
+composer.lock
+
+# 3.2 Ignore Configuration & Database Files
+.env
+database.php
+db.php
+
+# 3.3 Ignore Temporary & Cache Files
+*.log
+*.cache
+*.bak
+*.tmp
+
+# 3.4 Ignore Uploaded Files
+uploads/
+test_upload.*
+
+# 3.5 Ignore Editor & System Files
+.vscode/         # VS Code settings
+Thumbs.db       # Windows system files
